@@ -9,9 +9,9 @@ const StageColumn = ({ stage, index, onCardClick }) => (
             {(provided) => (
                 <Card className="mb-4" ref={provided.innerRef} {...provided.droppableProps}>
                     <Card.Header className="text-center">{stage.title}</Card.Header>
-                    <Card.Body>
+                    <Card.Body data-testid={`column-${stage.title}`}>
                         {stage.candidates.map((candidate, idx) => (
-                            <CandidateCard key={candidate.id} candidate={candidate} index={idx} onClick={onCardClick} />
+                            <CandidateCard key={candidate.id} candidate={candidate} index={idx} onClick={onCardClick} column={stage.title} />
                         ))}
                         {provided.placeholder}
                     </Card.Body>

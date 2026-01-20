@@ -6,5 +6,7 @@
     "schema": "backend/prisma/schema.prisma"
   },
   "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "cypress": "^15.9.0"
   }
 }
